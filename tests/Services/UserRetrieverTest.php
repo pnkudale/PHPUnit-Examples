@@ -2,7 +2,7 @@
 
 namespace PhpUnitDemo\Tests\Services;
 
-use PHPUnit\Framework\TestCase;
+use Mockery\Adapter\Phpunit\MockeryTestCase;
 use PhpUnitDemo\Services\UserRetriever;
 use PhpUnitDemo\Services\Client;
 use Mockery;
@@ -12,7 +12,7 @@ use Mockery;
  *
  * @author pravinkudale
  */
-class UserRetrieverTest extends TestCase
+class UserRetrieverTest extends MockeryTestCase
 {
     public function testGetUser() 
     {
@@ -40,5 +40,4 @@ class UserRetrieverTest extends TestCase
         $result = $userRetriever->getRemoteUsersData('foo@bar.com');
         $this->assertEquals('Successfully fetched remove users data', $result);
     }
-    
 }

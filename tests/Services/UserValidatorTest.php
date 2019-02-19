@@ -1,6 +1,9 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
+namespace PhpUnitDemo\Tests\Services;
+
+use Mockery;
+use Mockery\Adapter\Phpunit\MockeryTestCase;
 use PhpUnitDemo\Services\UserValidator;
 use PhpUnitDemo\Services\UserRetriever;
 
@@ -9,7 +12,7 @@ use PhpUnitDemo\Services\UserRetriever;
  *
  * @author pravinkudale
  */
-class UserValidatorTest extends TestCase
+class UserValidatorTest extends MockeryTestCase
 {
     public function testValidate() 
     {

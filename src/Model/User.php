@@ -3,7 +3,7 @@
 namespace PhpUnitDemo\Model;
 
 /**
- * Description of User
+ * User model
  *
  * @author pravinkudale
  */

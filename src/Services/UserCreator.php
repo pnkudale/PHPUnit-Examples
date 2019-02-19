@@ -5,14 +5,16 @@ namespace PhpUnitDemo\Services;
 use PhpUnitDemo\Model\User;
 
 /**
- * Description of UserCreator
+ * User creator service
  *
  * @author pravinkudale
  */
 class UserCreator 
 {
-    public function __construct(UserValidator $userValidator, UserPersister $userPersister) 
-    {
+    public function __construct(
+        UserValidator $userValidator, 
+        UserPersister $userPersister
+    ) {
         $this->userValidator = $userValidator;
         $this->userPersister = $userPersister;
     }

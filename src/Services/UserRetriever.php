@@ -23,7 +23,6 @@ class UserRetriever
     public function getRemoteUsersData($url) 
     {
         if (Client::getData($url)) {
-            Client::getData($url);
             return 'Successfully fetched remove users data';
         }
         

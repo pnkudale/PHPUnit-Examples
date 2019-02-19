@@ -2,16 +2,15 @@
 
 namespace PhpUnitDemo\Tests\Servies;
 
-use PHPUnit\Framework\TestCase;
+use Mockery\Adapter\Phpunit\MockeryTestCase;
 use PhpUnitDemo\Services\UserCreator;
 use PhpUnitDemo\Services\UserValidator;
 use PhpUnitDemo\Services\UserPersister;
 use PhpUnitDemo\Model\User;
 use Mockery;
 
-class UserCreatorTest extends TestCase
+class UserCreatorTest extends MockeryTestCase
 {
-    
     public function testUserCreation() 
     {
         $this->markTestSkipped();
@@ -81,4 +80,3 @@ class UserCreatorTest extends TestCase
         $this->assertInstanceOf(\DateTime::class, $result->getExpiryDate());
     }
 }
-
